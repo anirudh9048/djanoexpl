@@ -1,0 +1,2 @@
+# djanoexpl
+learning django
