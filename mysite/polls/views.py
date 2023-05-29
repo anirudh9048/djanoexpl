@@ -8,6 +8,14 @@ from django.shortcuts import render
 
 import tensorflow as tf
 
+
+def like_track(request):
+    if request.method == "POST":
+        vals = list(request.POST.items())
+        print(vals)
+    else:
+        print("ERROR: should be a post")
+
 def index(request):
     return render(request, 'index.html', {})
 

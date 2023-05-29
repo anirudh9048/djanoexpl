@@ -29,11 +29,22 @@
               var tn = document.createTextNode(element);
               document.getElementById("new").appendChild(tn);  
               document.getElementById("new").style.color = "blue";
+
+              var likeBtn = document.createElement("BUTTON");
+              likeBtn.innerText = 'Like this track';
+              likeBtn.onclick = b2;
+              document.getElementById("new").appendChild(likeBtn); 
             });
           }
         }
       };
-      
+      function b2() {
+        console.log("In function b2");
+        const http = new XMLHttpRequest();
+        http.open("POST", "/polls/like-track");
+        http.send();
+
+      }
     }
   </script>
   <body style="background-color: black">
